@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/underwater_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/arrowUp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:rotation="-90"
+        android:src="@drawable/piranha_right"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/arrowDown"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:rotation="-90"
+        android:src="@drawable/piranha_left"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/piranha_right"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/piranha_left"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ball_imgView"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/fish"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/up_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="112dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/move_up" />
+
+    <ImageView
+        android:id="@+id/left_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="68dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/move_left" />
+
+    <ImageView
+        android:id="@+id/down_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/move_down" />
+
+    <ImageView
+        android:id="@+id/right_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="68dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/move_right" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/star"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="264dp" />
+
+    <TextView
+        android:id="@+id/lives_text"
+        android:layout_width="130dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.75"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="Lives: 3"
+        android:textColor="#D9D81B60"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/points_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/points_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="44dp"
+        android:alpha="0.75"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="Points: 0"
+        android:textColor="#D9D81B60"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/swipe_to_restart_text"
+        android:layout_width="378dp"
+        android:layout_height="345dp"
+        android:layout_marginBottom="224dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="Swipe Right to Restart Round"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#D5B6245A"
+        android:textSize="96sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/freeze"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/freeze_icon" />
+
+    <ImageView
+        android:id="@+id/speed"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="68dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/speed_icon" />
+
+    <ImageView
+        android:id="@+id/portal"
+        android:layout_width="47dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/portal_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
